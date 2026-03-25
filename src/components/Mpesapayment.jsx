@@ -1,6 +1,6 @@
 import axios from "axios"
 import React, { useState } from "react"
-import { useLocation, useSearchParams } from "react-router-dom"
+import { useLocation, } from "react-router-dom"
 const Mpesapayment = () => {
     const { singleproduct } = useLocation().state || {}
     const imagepath = "http://abedhiggs.alwaysdata.net/static/images/"

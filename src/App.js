@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -8,7 +8,6 @@ import Signin from './components/Signin';
 import Addproducts from './components/Addproducts';
 import Getproducts from './components/Getproducts';
 import Mpesapayment from './components/Mpesapayment';
-import Test from './components/Test';
 import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 function App() {
@@ -18,7 +17,7 @@ function App() {
         {/* navbar goes here  */}
         <Navbar />
         <header className="App-header">
-          <marquee behavior="" direction="up"><h1 className='text-center'>Welcome to iphones </h1></marquee>
+         <div className='scroll-text'>Welcome to iphones </div>
         </header>
         <nav>
 

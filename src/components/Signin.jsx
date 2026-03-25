@@ -36,7 +36,8 @@ const Signin = () => {
                 // redirect user to homepage 
             }
         } catch (error) {
-
+            setError(error.message)
+            setLoading("")
         }
     }
     return (

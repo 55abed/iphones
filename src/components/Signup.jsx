@@ -12,7 +12,7 @@ const Signup = () => {
     const [success, setSuccess] = useState("")
     const [error, setError] = useState("")
     // function to handle submit 
-    const handlesubmit =async (e) => {
+    const handlesubmit = async (e) => {
         e.preventDefault()
         setLoading("Please  wait.....")
         // create empty digital envelope to store user inputs 
@@ -23,11 +23,12 @@ const Signup = () => {
         formdata.append("password", password)
         formdata.append("phone", phone)
         try {
-            const response =await axios.post("http://higgs.alwaysdata.net/api/signup",formdata)
+            const response = await axios.post("http://higgs.alwaysdata.net/api/signup", formdata)
             setSuccess(response.data.message)
             setLoading("")
         } catch (error) {
-
+            setError(error.message)
+            setLoading("")
         }
     }
     return (

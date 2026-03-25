@@ -43,3 +43,22 @@ body {
     transform: rotate(360deg);
   }
 }
+.scroll-text {
+  display: block;
+  overflow: hidden;
+  height: 50px; /* adjust depending on text size */
+  position: relative;
+}
+
+.scroll-text {
+  animation: scroll-up 4s linear infinite;
+}
+
+@keyframes scroll-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}

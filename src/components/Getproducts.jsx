@@ -17,6 +17,8 @@ const Getproducts = () => {
             setProducts(response.data)
             setLoading("")
         } catch (error) {
+            setError(error.message)
+            setLoading("")
 
         }
     }
@@ -30,7 +32,7 @@ const Getproducts = () => {
     return (
         <div className="row">
             {/* carousel goes here  */}
-            <Carousel/>
+            <Carousel />
             <h1 className="text-primary text-center">Available Products</h1>
             {/* bind the states  */}
             <h2 className="text-secondary">{loading}</h2>
@@ -47,7 +49,7 @@ const Getproducts = () => {
                             <h2 className="text-info">{singleproduct.product_name}</h2>
                             <p>{singleproduct.product_description}</p>
                             <b className="text-warning">KSH {singleproduct.product_cost}</b><br />
-                            <button className="btn btn-danger w-100" onClick={() => navigate("/makepayment",{state:{singleproduct}})}>Purchase now</button>
+                            <button className="btn btn-danger w-100" onClick={() => navigate("/makepayment", { state: { singleproduct } })}>Purchase now</button>
                         </div>
                     </div>
                 </div>
