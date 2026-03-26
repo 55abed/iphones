@@ -24,7 +24,7 @@ function App() {
           {/* nav link goes here  */}
           <Link to="/signup" ></Link>
           <Link to="/signin" ></Link>
-          <Link to="/"></Link>
+          <Link to="/home"></Link>
           <Link to="/addproducts" ></Link>
 
         </nav>
@@ -32,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/" element={<Getproducts />} />
+          <Route path="/home" element={<Getproducts />} />
           <Route path="/addproducts" element={<Addproducts />} />
           <Route path="/makepayment" element={<Mpesapayment />} />
 
